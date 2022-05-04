@@ -20,7 +20,7 @@ COPY start.sh .
 COPY jobs/*.* ./jobs/
 
 #CMD ["ls", "/etc"]
-CMD ["pwd"]
+CMD ["ls"]
 
 # Run cron on container startup
 # CMD ["./start.sh"]
