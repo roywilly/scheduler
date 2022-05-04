@@ -19,6 +19,9 @@ COPY crontab.* ./
 COPY start.sh .
 COPY jobs/*.* ./jobs/
 
+# execute perm
+RUN find . -type f -iname "*.sh" -exec chmod +x {} 
+
 #CMD ["ls", "/etc"]
 #CMD ["ls -l"]
 CMD ["ls", "-l"]
