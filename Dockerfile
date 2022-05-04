@@ -14,6 +14,7 @@ WORKDIR /usr/scheduler
 # Copy files
 COPY crontab.* ./
 COPY start.sh .
+COPY jobs/*.* ./jobs/
 
 #CMD ["ls", "/etc"]
 CMD ["pwd"]
