@@ -5,4 +5,18 @@ RUN addgroup -S -g 1001 radix-non-root-group
 RUN adduser -S -u 1001 -G radix-non-root-group radix-non-root-user
 
 USER 1001
-CMD ["ls", "/etc"]
+
+# Install required packages
+RUN apk add --update --no-cache bash
+
+WORKDIR /usr/scheduler
+
+# Copy files
+COPY crontab.* ./
+COPY start.sh .
+
+#CMD ["ls", "/etc"]
+CMD ["pwd"]
+
+# Run cron on container startup
+# CMD ["./start.sh"]
