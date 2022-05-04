@@ -20,7 +20,7 @@ COPY start.sh .
 COPY jobs/*.* ./jobs/
 
 # Set execute perm
-RUN chmod +x start.sh 
+RUN chmod 777 start.sh 
 
 #CMD ["ls", "/etc"]
 #CMD ["ls -l"]
