@@ -24,7 +24,7 @@ USER 1001
 
 #CMD ["ls", "/etc"]
 #CMD ["ls -l"]
-CMD ["ls", "-l"]
+#CMD ["ls", "-l"]
 
 # Run cron on container startup
-#CMD ["./start.sh"]
+CMD ["./start.sh"]
