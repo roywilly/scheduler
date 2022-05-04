@@ -15,12 +15,16 @@ COPY jobs/*.* ./jobs/
 # Set execute perm
 RUN chmod 777 start.sh 
 
+RUN whoami
+
 
 # User change is last before CMD
 RUN addgroup -S -g 1001 radix-non-root-group
 # Add a new user "radix-non-root-user" with user id 1001 and include in group
 RUN adduser -S -u 1001 -G radix-non-root-group radix-non-root-user
 USER 1001
+
+RUN whoami
 
 #CMD ["ls", "/etc"]
 #CMD ["ls -l"]
