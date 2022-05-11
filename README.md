@@ -1,3 +1,3 @@
 # scheduler
-Test of a cron scheduler
+Test of a cron scheduler, bash
 
